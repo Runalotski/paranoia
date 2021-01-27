@@ -14,6 +14,9 @@ export class paranoiaActor extends Actor {
     const data = actorData.data;
     const flags = actorData.flags;
 
+    console.log("***********************************************************************************************************");
+    console.log(data);
+
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     if (actorData.type === 'character') this._prepareCharacterData(actorData);

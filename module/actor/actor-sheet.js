@@ -7,7 +7,7 @@ export class paranoiaActorSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["paranoia", "sheet", "actor"],
+      classes: ["paranoia", "sheet", "character"],
       template: "systems/paranoia/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
