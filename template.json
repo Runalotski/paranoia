@@ -23,7 +23,7 @@
           "value": 1
         }
       },
-      "abilities": {
+      "stats": {
         "vio": {
           "value": 0
         },
@@ -34,15 +34,6 @@
           "value": 0
         },
         "mec": {
-          "value": 0
-        },
-        "wis": {
-          "value": 0
-        },
-        "cha": {
-          "value": 0
-        },
-        "abc": {
           "value": 0
         }
       },

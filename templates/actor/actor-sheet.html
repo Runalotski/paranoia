@@ -33,10 +33,10 @@
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  --}}
           <div class="abilities grid grid-3col">
-            {{#each data.abilities as |ability key|}}
+            {{#each data.stats as |stat key|}}
               <div class="ability flexrow flex-group-center">
-                <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
-                <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+                <label for="data.stats.{{key}}.value" class="resource-label">{{key}}</label>
+                <input type="text" name="data.stats.{{key}}.value" value="{{stat.value}}" data-dtype="Number"/>
               </div>
             {{/each}}
           </div>
