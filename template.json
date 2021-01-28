@@ -38,11 +38,69 @@
         }
       },
       "skills":{
+        "athletics":{
+          "value" : 0,
+          "stat": "vio"
+        },
+        "science":{
+          "value" : 0,
+          "stat": "bra"
+        },
+        "bluff":{
+          "value" : 0,
+          "stat": "chu"
+        },
+        "operate":{
+          "value" : 0,
+          "stat": "mec"
+        },
         "guns": {
-          "value" : 0
+          "value" : 0,
+          "stat": "vio"
+        },
+        "psychology": {
+          "value" : 0,
+          "stat": "bra"
+        },
+        "charm": {
+          "value" : 0,
+          "stat": "chu"
+        },
+        "engineer": {
+          "value" : 0,
+          "stat": "mec"
+        },
+        "meele": {
+          "value" : 0,
+          "stat": "vio"
+        },
+        "bureaucracy": {
+          "value" : 0,
+          "stat": "bra"
+        },
+        "intimidate": {
+          "value" : 0,
+          "stat": "chu"
+        },
+        "program": {
+          "value" : 0,
+          "stat": "mec"
         },
         "throw": {
-          "value" : 0
+          "value" : 0,
+          "stat": "vio"
+        },
+        "alpha complex": {
+          "value" : 0,
+          "stat": "bra"
+        },
+        "stealth": {
+          "value" : 0,
+          "stat": "chu"
+        },
+        "demolitions": {
+          "value" : 0,
+          "stat": "mec"
         }
       }
     }

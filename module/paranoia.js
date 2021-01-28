@@ -44,4 +44,11 @@ Hooks.once('init', async function() {
   Handlebars.registerHelper('toLowerCase', function(str) {
     return str.toLowerCase();
   });
+
+  Handlebars.registerHelper('ifEql', function(v1, v2) {
+    console.log("v1 = " + v1);
+    console.log("v2 = " + v2);
+    console.log("v1 == v2 " + v1 == v2);
+    return v1 == v2;
+  });
 });
