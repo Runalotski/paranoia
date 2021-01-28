@@ -34,13 +34,50 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="core">Core</a>
         <a class="item" data-tab="stats">Stats & Skills</a>
+        <a class="item" data-tab="wellbeing">Wellbeing</a>
         <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="items">Items</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
+
+      {{!-- Core Tab --}}
+        <div class="tab biography" data-group="primary" data-tab="core">
+
+          <div class="ability flexrow flex-group-center">
+            <label for="data.clones.value" class="resource-label">Clones</label>
+            <input type="text" name="data.clones.value" value="{{data.clones.value}}" data-dtype="Number"/>
+          </div>
+          <div class="ability flexrow flex-group-center">
+            <label for="data.treason.value" class="resource-label">Treason Stars</label>
+            <input type="text" name="data.treason.value" value="{{data.treason.value}}" data-dtype="Number"/>
+          </div>
+          <div class="ability flexrow flex-group-center">
+            <label for="data.xp.value" class="resource-label">Xp Points</label>
+            <input type="text" name="data.xp.value" value="{{data.xp.value}}" data-dtype="Number"/>
+          </div>
+          <div class="ability flexrow flex-group-center">
+            <label for="data.personality.value" class="resource-label">Personality</label>
+            <input type="text" name="data.personality.value" value="{{data.personality.value}}" data-dtype="String"/>
+          </div>
+          <br>
+          <div class="ability flexrow flex-group-center">
+            <label for="data.clearence.value" class="resource-label">Security Clearence</label>
+            <input type="text" name="data.clearence.value" value="{{data.clearence.value}}" data-dtype="String"/>
+          </div>
+          <div class="ability flexrow flex-group-center">
+            <label for="data.homesec.value" class="resource-label">Home Sector</label>
+            <input type="text" name="data.homesec.value" value="{{data.homesec.value}}" data-dtype="String"/>
+          </div> 
+          <div class="ability flexrow flex-group-center">
+            <label for="data.gender.value" class="resource-label">Gender</label>
+            <input type="text" name="data.gender.value" value="{{data.gender.value}}" data-dtype="String"/>
+          </div>
+          
+        </div>
 
         {{!-- stats and skills Tab --}}
         <div class="tab biography" data-group="primary" data-tab="stats">
@@ -62,6 +99,25 @@
                 </div>
               {{/each}}
             </div>
+          </div>
+        </div>
+
+        {{!-- Wellbeing Tab --}}
+        <div class="tab biography" data-group="primary" data-tab="wellbeing">
+          <div class="abilities grid grid-2col">
+            <div class="ability flexrow flex-group-center">
+              <label for="data.moxie.value" class="resource-label">Moxie</label>
+              <input type="text" name="data.moxie.value" value="{{data.moxie.value}}" data-dtype="Number"/>
+            </div>
+            <div class="ability flexrow flex-group-center">
+              <label for="data.moxie.max" class="resource-label">Moxie Max</label>
+              <input type="text" name="data.moxie.max" value="{{data.moxie.max}}" data-dtype="Number"/>
+            </div>
+          </div>
+          <label class="resource-label">Hurt, Injured, Maimed, Dead</label>
+          <div class="ability flexrow flex-group-center">
+            <label for="data.wounds.value" class="resource-label">Wounds</label>
+            <input type="text" name="data.wounds.value" value="{{data.wounds.value}}" data-dtype="String"/>
           </div>
         </div>
 

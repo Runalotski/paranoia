@@ -102,6 +102,34 @@
           "value" : 0,
           "stat": "mec"
         }
+      },
+      "clearence":{
+        "value": "Red"
+      },
+      "homesec":{
+        "value": ""
+      },
+      "clones":{
+        "value": 6
+      },
+      "gender":{
+        "value": ""
+      },
+      "personality": {
+        "value": ""
+      },
+      "treason": {
+        "value": 0
+      },
+      "xp": {
+        "value" : 0
+      },
+      "moxie":{
+        "value": 8,
+        "max": 8
+      },
+      "wounds":{
+        "value": "Fine"
       }
     }
   },
