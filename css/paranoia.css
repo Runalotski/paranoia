@@ -246,3 +246,59 @@
   flex: 0 0 86px;
   text-align: right;
 }
+
+.paranoia .part-header{
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.paranoia .part-header .dark-box{
+  float: left;
+  width: 100spx;
+  padding: 5px;
+  background-color: #244362;
+  text-align: center;
+  color: #fff;
+  }
+
+.paranoia .part-header .medium-box{
+  float: left;
+  flex: 1;
+  padding: 5px;
+  background-color: #7eb6e6;
+}
+
+.paranoia .sheet-data-flex{
+  padding: 10px;
+  height:50px;
+}
+.paranoia .sheet-data-flex{
+  padding: 10px;
+  height:50px;
+
+  display: flex;
+}
+
+.paranoia .data-key{
+  float: left;
+  padding: 5px;
+}
+
+.paranoia .data-value
+{
+  padding: 5px;
+  float: left;
+  flex: 1;
+  border:3px solid #7eb6e6;
+  text-align: left;
+}
+
+.paranoia .data-number{
+  padding: 5px;
+  float: left;
+  width: 30px;
+  border:3px solid #7eb6e6;
+  text-align: left;
+}
+
