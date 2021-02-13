@@ -6,32 +6,33 @@
           <div class="dark-box">/// Part One</div>
           <div class="medium-box">Core Information >>></div>
         </div>
-        <div class="ability flexrow flex-group-center">
+        <div class="ability flexrow flex-center">
           <div class="sheet-data-flex">
             <div class="data-key">Name :</div>
             <div class="data-value">Adam Chapman</div>
           </div>
           <div class="sheet-data-flex">
-            <div class="data-key">Security Clearence :</div>
-            <div class="data-value">Red</div>
-          </div>
-          <div class="sheet-data-flex">
-            <div class="data-key">Home Sector :</div>
-            <div class="data-value">HKW</div>
-          </div>
-          <div class="sheet-data">
-            <div class="data-key">Clones # :</div>
-            <div class="data-number">6</div>
+            <div class="data-key">Personality :</div>
+            <div class="data-value">Strong Determind Loyal</div>
           </div>
       </div>
-      <div class="ability flexrow flex-group-center">
+      <div class="ability flexrow flex-center">
         <div class="sheet-data-flex">
           <div class="data-key">Gender :</div>
           <div class="data-value">M</div>
         </div>
+        
         <div class="sheet-data-flex">
-          <div class="data-key">Personality :</div>
-          <div class="data-value">Strong Determind Loyal</div>
+          <div class="data-key">Security Clearence :</div>
+          <div class="data-value">Red</div>
+        </div>
+        <div class="sheet-data-flex">
+          <div class="data-key">Home Sector :</div>
+          <div class="data-value">HKW</div>
+        </div>
+        <div class="sheet-data">
+          <div class="data-key">Clones # :</div>
+          <div class="data-number">6</div>
         </div>
       </div>
       
@@ -40,7 +41,7 @@
           <div class="medium-box">Core Development >>></div>
         </div>
 
-    <div class="ability flexrow flex-group-center">
+    <div class="ability flexrow flex-center">
       <div class="sheet-data-flex">
         <div class="data-key">treason Stars :</div>
         <div class="data-value">0</div>
@@ -58,6 +59,47 @@
             <input class="data-value" type="text" name="data.stats.{{statID}}.value" value="{{stat.value}}" data-dtype="Number"/>
         {{/each}} 
       </div>
+
+      <div class="part-header">
+        <div class="dark-box">/// Part Three</div>
+        <div class="medium-box">SKills >>></div>
+      </div>
+
+      <div class="abilities grid grid-4col">
+        {{#each data.skills as |skill skillID|}}
+          <div class="ability flexrow flex-center">
+            <label class="data-key" for="data.skills.{{skillID}}.value" class="resource-label">{{skillID}}</label>
+            <input class="data-value" type="text" name="data.skills.{{skillID}}.value" value="{{skill.value}}" data-dtype="Number"/>
+          </div>
+        {{/each}}
+      </div>
+
+      <div class="part-header">
+        <div class="dark-box">/// Part Four</div>
+        <div class="medium-box">Wellbeing >>></div>
+      </div>
+
+      <div class="abilities grid grid-2col">
+      <div class="sheet-trackdata">
+        <div class="trackdata-key">moxie >>></div>
+        <div class="trackdata-value">oooooooo</div>
+      </div>
+      <div class="sheet-trackdata">
+        <div class="trackdata-key">damage >>></div>
+        <div class="trackdata-value">This is damage stuff</div>
+      </div>
+    </div>
+
+    <div class="sheet-trackdata">
+      <div class="trackdata-key">Memory >>></div>
+      <div class="trackdata-value">ZB</div>
+    </div>
+
+    <div class="part-header">
+      <div class="dark-box">/// Part Five</div>
+      <div class="medium-box">Equipment >>></div>
+    </div>
+
 
         <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
         
@@ -119,7 +161,7 @@
                 <label for="data.stats.{{statID}}.value" class="resource-label">{{statID}}</label>
                 <input type="text" name="data.stats.{{statID}}.value" value="{{stat.value}}" data-dtype="Number"/>
               </div>
-            {{/each}} -->
+            {{/each}} 
           </div>
           <div>Skills</div>
             <div class="abilities grid grid-4col">
@@ -128,7 +170,7 @@
                   <label for="data.skills.{{skillID}}.value" class="resource-label">{{skillID}}</label>
                   <input type="text" name="data.skills.{{skillID}}.value" value="{{skill.value}}" data-dtype="Number"/>
                 </div>
-              {{/each}}
+              {{/each}} -->
             </div>
           </div>
         </div>

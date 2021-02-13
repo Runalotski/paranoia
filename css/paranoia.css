@@ -314,3 +314,22 @@
   color: #7eb6e6;
 }
 
+.paranoia .sheet-trackdata{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-color: #7eb6e6;
+  border-style: solid;
+  border-width: 3px;
+}
+
+.paranoia .trackdata-key{
+  background-color: #e1f4fd;
+  color: #7eb6e6;
+  padding: 5px;
+}
+
+.paranoia .trackdata-value{
+  background-color: #ffffff;
+  color: #7eb6e6;
+  padding: 5px;
+}
