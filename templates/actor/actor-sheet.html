@@ -9,30 +9,30 @@
         <div class="ability flexrow flex-center">
           <div class="sheet-data-flex">
             <div class="data-key">Name :</div>
-            <div class="data-value">Adam Chapman</div>
+            <input class="data-value" input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
           </div>
           <div class="sheet-data-flex">
-            <div class="data-key">Personality :</div>
-            <div class="data-value">Strong Determind Loyal</div>
+            <label class="data-key" for="data.personality.value" class="resource-label">Personality</label>
+            <input class="data-value" type="text" name="data.personality.value" value="{{data.personality.value}}" data-dtype="String"/>
           </div>
       </div>
+
       <div class="ability flexrow flex-center">
         <div class="sheet-data-flex">
-          <div class="data-key">Gender :</div>
-          <div class="data-value">M</div>
-        </div>
-        
-        <div class="sheet-data-flex">
-          <div class="data-key">Security Clearence :</div>
-          <div class="data-value">Red</div>
+          <label class="data-key" for="data.gender.value" class="resource-label">Gender</label>
+            <input class="data-value" type="text" name="data.gender.value" value="{{data.gender.value}}" data-dtype="String"/>
         </div>
         <div class="sheet-data-flex">
-          <div class="data-key">Home Sector :</div>
-          <div class="data-value">HKW</div>
+          <label class="data-key" for="data.clearence.value" class="resource-label">Security Clearence</label>
+          <input class="data-value" type="text" name="data.clearence.value" value="{{data.clearence.value}}" data-dtype="String"/>
+        </div>
+        <div class="sheet-data-flex">
+          <label class="data-key" for="data.homesec.value" class="resource-label">Home Sector</label>
+          <input class="data-value" type="text" name="data.homesec.value" value="{{data.homesec.value}}" data-dtype="String"/>
         </div>
         <div class="sheet-data">
-          <div class="data-key">Clones # :</div>
-          <div class="data-number">6</div>
+          <label class="data-key" for="data.clones.value" class="resource-label">Clones</label>
+          <input class="data-number" type="text" name="data.clones.value" value="{{data.clones.value}}" data-dtype="Number"/>
         </div>
       </div>
       
@@ -43,8 +43,8 @@
 
     <div class="ability flexrow flex-center">
       <div class="sheet-data-flex">
-        <div class="data-key">treason Stars :</div>
-        <div class="data-value">0</div>
+        <label class="data-key" for="data.treason.value" class="resource-label">Treason Stars</label>
+        <input class="data-value" type="text" name="data.treason.value" value="{{data.treason.value}}" data-dtype="Number"/>
       </div>
       <div class="sheet-data-flex">
         <div class="data-key">XP Points :</div>
@@ -99,9 +99,6 @@
       <div class="dark-box">/// Part Five</div>
       <div class="medium-box">Equipment >>></div>
     </div>
-
-
-        <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
         
     </header>
 
@@ -119,7 +116,7 @@
 
       {{!-- Core Tab --}}
         <div class="tab biography" data-group="primary" data-tab="core">
-
+<!--
           <div class="ability flexrow flex-group-center">
             <label for="data.clones.value" class="resource-label">Clones</label>
             <input type="text" name="data.clones.value" value="{{data.clones.value}}" data-dtype="Number"/>
@@ -149,7 +146,7 @@
             <label for="data.gender.value" class="resource-label">Gender</label>
             <input type="text" name="data.gender.value" value="{{data.gender.value}}" data-dtype="String"/>
           </div>
-          
+          -->
         </div>
 
         {{!-- stats and skills Tab --}}
