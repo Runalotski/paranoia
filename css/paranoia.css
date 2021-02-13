@@ -302,3 +302,15 @@
   text-align: left;
 }
 
+.paranoia .sub-part{
+  margin-left: 10px;
+  margin-right: 10px;
+  flex: 1;
+  padding: 5px;
+  background-color: #e1f4fd;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #7eb6e6;
+  color: #7eb6e6;
+}
+

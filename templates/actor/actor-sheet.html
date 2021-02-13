@@ -2,8 +2,6 @@
 
     {{!-- Sheet Header --}}
     <header>
-        
-
         <div class="part-header">
           <div class="dark-box">/// Part One</div>
           <div class="medium-box">Core Information >>></div>
@@ -25,6 +23,40 @@
             <div class="data-key">Clones # :</div>
             <div class="data-number">6</div>
           </div>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <div class="sheet-data-flex">
+          <div class="data-key">Gender :</div>
+          <div class="data-value">M</div>
+        </div>
+        <div class="sheet-data-flex">
+          <div class="data-key">Personality :</div>
+          <div class="data-value">Strong Determind Loyal</div>
+        </div>
+      </div>
+      
+        <div class="part-header">
+          <div class="dark-box">/// Part Two</div>
+          <div class="medium-box">Core Development >>></div>
+        </div>
+
+    <div class="ability flexrow flex-group-center">
+      <div class="sheet-data-flex">
+        <div class="data-key">treason Stars :</div>
+        <div class="data-value">0</div>
+      </div>
+      <div class="sheet-data-flex">
+        <div class="data-key">XP Points :</div>
+        <div class="data-value">0</div>
+      </div>
+    </div>
+      <div class="sub-part">Stats >>></div>
+
+      <div class="sheet-data-flex">
+        {{#each data.stats as |stat statID|}}
+            <label class="data-key" for="data.stats.{{statID}}.value" class="resource-label">{{statID}}</label>
+            <input class="data-value" type="text" name="data.stats.{{statID}}.value" value="{{stat.value}}" data-dtype="Number"/>
+        {{/each}} 
       </div>
 
         <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
@@ -81,13 +113,13 @@
         {{!-- stats and skills Tab --}}
         <div class="tab biography" data-group="primary" data-tab="stats">
           <div>Stats</div>
-          <div class="abilities grid grid-4col">
+          <div class="abilities grid grid-4col"><!--
             {{#each data.stats as |stat statID|}}
               <div class="ability flexrow flex-group-center">
                 <label for="data.stats.{{statID}}.value" class="resource-label">{{statID}}</label>
                 <input type="text" name="data.stats.{{statID}}.value" value="{{stat.value}}" data-dtype="Number"/>
               </div>
-            {{/each}} 
+            {{/each}} -->
           </div>
           <div>Skills</div>
             <div class="abilities grid grid-4col">
