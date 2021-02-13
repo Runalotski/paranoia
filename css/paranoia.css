@@ -4,6 +4,18 @@
   font-family: "Roboto", sans-serif;
 }
 
+.window-app .window-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  background: #fff;
+  padding: 8px;
+  color: #191813;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .rollable:hover, .rollable:focus {
   color: #000;
   text-shadow: 0 0 10px red;
