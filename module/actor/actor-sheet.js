@@ -111,7 +111,6 @@ export class paranoiaActorSheet extends ActorSheet {
   }
     
   _onClickStatLevel(event) {
-      console.log("I am an Event");
     event.preventDefault();
     this.actor.checkMarks(this.actor, event);
     this._onSubmit(event);
@@ -120,7 +119,7 @@ export class paranoiaActorSheet extends ActorSheet {
   _getClickIcon(level, stat) {
     const maxPoints = this.object.data.data[stat].max;
     const icons = {};
-    const usedPoint = '<i class="far fa-dot-circle"></i>';
+    const usedPoint = '<i class="fas fa-circle"></i>';
     const unUsedPoint = '<i class="far fa-circle"></i>';
 
     for (let i = 0; i <= maxPoints; i++) {
