@@ -56,6 +56,8 @@ export class paranoiaActorSheet extends ActorSheet {
 
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
+      
+    html.find('.click-stat-level').on('click contextmenu', this._onClickStatLevel.bind(this)); // Toggle for radio buttons
   }
 
   /* -------------------------------------------- */
