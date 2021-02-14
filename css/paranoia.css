@@ -279,6 +279,7 @@
   flex: 1;
   padding: 5px;
   background-color: #7eb6e6;
+  font-weight: bold;
 }
 
 .paranoia .sheet-data{
@@ -329,6 +330,7 @@
   border-width: 3px;
   border-color: #7eb6e6;
   color: #7eb6e6;
+  font-weight: bold;
 }
 
 .paranoia .sheet-trackdata{
@@ -337,11 +339,13 @@
   border-color: #7eb6e6;
   border-style: solid;
   border-width: 3px;
+  
 }
 
 .paranoia .trackdata-key{
   background-color: #e1f4fd;
   color: #7eb6e6;
+  font-weight: bold;
   padding: 5px;
 }
 

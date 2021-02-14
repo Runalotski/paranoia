@@ -144,7 +144,7 @@ export class paranoiaActorSheet extends ActorSheet {
                          '<div class="trackdata-value">dead</div>']
     const maxPoints = this.object.data.data.damage.max;
     const icons = {};
-    const usedPoint = '<i class="trackdata-value fas fa-sqaure"></i>';
+    const usedPoint = '<i class="trackdata-value fas fa-square"></i>';
     const unUsedPoint = '<i class="trackdata-value far fa-square"></i>';
 
     for (let i = 0; i <= maxPoints; i++) {
@@ -158,7 +158,6 @@ export class paranoiaActorSheet extends ActorSheet {
       icons[i] = iconHtml;
     }
         
-        console.log("This is the value " + icons[this.object.data.data.damage.value]);
     return icons[this.object.data.data.damage.value];
   }
 

@@ -89,8 +89,9 @@
       </div>
       <div class="sheet-trackdata">
         <div class="trackdata-key">damage >>></div>
-          <div class="trackdata-value sheet-data-flex-nopad">
-            {{{data.damage.icon}}}
+          <div class="trackdata-value">
+            <input type="hidden" name="data.damage.value" data-max="{{data.damage.max}}" value="{{data.damage.value}}" data-dtype="Number"/>
+              <div class="click-stat-level sheet-data-flex-nopad" title="clicke me" >{{{data.damage.icon}}}</div>
           </div>
       </div>
     </div>
