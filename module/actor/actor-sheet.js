@@ -24,6 +24,9 @@ export class paranoiaActorSheet extends ActorSheet {
     for (let attr of Object.values(data.data.attributes)) {
       attr.isCheckbox = attr.dtype === "Boolean";
     }
+    
+    data.actor.data.moxie.icon = this._getClickIcon(data.actor.data.moxie.value, 'moxie');
+      
     return data;
   }
 
@@ -103,6 +106,25 @@ export class paranoiaActorSheet extends ActorSheet {
         flavor: label
       });
     }
+  }
+    
+    _getClickIcon(level, stat) {
+    const maxPoints = this.object.data.data[stat].max;
+    const icons = {};
+    const usedPoint = '<i class="far fa-dot-circle"></i>';
+    const unUsedPoint = '<i class="far fa-circle"></i>';
+
+    for (let i = 0; i <= maxPoints; i++) {
+      let iconHtml = '';
+
+      for (let iconColumn = 1; iconColumn <= maxPoints; iconColumn++) {
+        iconHtml += iconColumn <= i ? usedPoint : unUsedPoint;
+      }
+
+      icons[i] = iconHtml;
+    }
+
+    return icons[level];
   }
 
 }
