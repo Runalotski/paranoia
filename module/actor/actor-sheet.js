@@ -27,6 +27,8 @@ export class paranoiaActorSheet extends ActorSheet {
     
     data.actor.data.moxie.icon = this._getClickIcon(data.actor.data.moxie.value, 'moxie');
       
+    data.actor.data.damage.icon = this._getDamageClickIcon();
+      
     return data;
   }
 
@@ -133,6 +135,31 @@ export class paranoiaActorSheet extends ActorSheet {
     }
 
     return icons[level];
+  }
+    
+    _getDamageClickIcon() {
+    const damageLabels = ['<div class="trackdata-value">hurt</div>',
+                         '<div class="trackdata-value">injured</div>',
+                         '<div class="trackdata-value">maimed</div>',
+                         '<div class="trackdata-value">dead</div>']
+    const maxPoints = this.object.data.data.damage.max;
+    const icons = {};
+    const usedPoint = '<i class="trackdata-value fas fa-sqaure"></i>';
+    const unUsedPoint = '<i class="trackdata-value far fa-square"></i>';
+
+    for (let i = 0; i <= maxPoints; i++) {
+      let iconHtml = '';
+
+      for (let iconColumn = 1; iconColumn <= maxPoints; iconColumn++) {
+        iconHtml += damageLabels[iconColumn-1];
+        iconHtml += iconColumn <= i ? usedPoint : unUsedPoint;
+      }
+
+      icons[i] = iconHtml;
+    }
+        
+        console.log("This is the value " + icons[this.object.data.data.damage.value]);
+    return icons[this.object.data.data.damage.value];
   }
 
 }

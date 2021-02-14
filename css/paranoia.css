@@ -281,7 +281,7 @@
   background-color: #7eb6e6;
 }
 
-.paranoia .sheet-data-flex{
+.paranoia .sheet-data{
   padding: 10px;
   height:50px;
 }
@@ -291,6 +291,11 @@
 
   display: flex;
 }
+
+.paranoia .sheet-data-flex-nopad{
+  display: flex;
+}
+
 
 .paranoia .data-key{
   float: left;
