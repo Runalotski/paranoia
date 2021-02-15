@@ -3,10 +3,10 @@
     "types": ["character"],
     "templates": {
       "base": {
-        "health": {
-          "value": 10,
+        "damage": {
+          "value": 0,
           "min": 0,
-          "max": 10
+          "max": 4
         },
         "power": {
           "value": 5,
@@ -119,7 +119,8 @@
         "value": ""
       },
       "treason": {
-        "value": 0
+        "value": 0,
+          "max": 5
       },
       "xp": {
         "value" : 0
