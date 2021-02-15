@@ -7,32 +7,32 @@
           <div class="medium-box">Core Information >>></div>
         </div>
         <div class="ability flexrow flex-center">
-          <div class="sheet-data-flex">
+          <div class="sheet-data">
             <div class="data-key">Name :</div>
             <input class="data-value" input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
           </div>
-          <div class="sheet-data-flex">
+          <div class="sheet-data">
             <label class="data-key" for="data.personality.value" class="resource-label">Personality</label>
             <input class="data-value" type="text" name="data.personality.value" value="{{data.personality.value}}" data-dtype="String"/>
           </div>
       </div>
 
       <div class="ability flexrow flex-center">
-        <div class="sheet-data-flex">
+        <div class="sheet-data">
           <label class="data-key" for="data.gender.value" class="resource-label">Gender</label>
             <input class="data-value" type="text" name="data.gender.value" value="{{data.gender.value}}" data-dtype="String"/>
         </div>
-        <div class="sheet-data-flex">
+        <div class="sheet-data">
           <label class="data-key" for="data.clearence.value" class="resource-label">Security Clearence</label>
           <input class="data-value" type="text" name="data.clearence.value" value="{{data.clearence.value}}" data-dtype="String"/>
         </div>
-        <div class="sheet-data-flex">
+        <div class="sheet-data">
           <label class="data-key" for="data.homesec.value" class="resource-label">Home Sector</label>
           <input class="data-value" type="text" name="data.homesec.value" value="{{data.homesec.value}}" data-dtype="String"/>
         </div>
-        <div class="sheet-data">
+        <div class="sheet-data" style="flex:0.1">
           <label class="data-key" for="data.clones.value" class="resource-label">Clones</label>
-          <input class="data-number" type="text" name="data.clones.value" value="{{data.clones.value}}" data-dtype="Number"/>
+          <input class="data-value" type="text" name="data.clones.value" value="{{data.clones.value}}" data-dtype="Number"/>
         </div>
       </div>
       
@@ -43,9 +43,7 @@
 
     <div class="ability flexrow flex-center">
       <div class="sheet-data-flex">
-          
-          
-          <div class="data-key">Treason Stars</div>
+          <Label class="data-key">Treason Stars</Label>
           <div class="trackdata-value">
             <input type="hidden" name="data.treason.value" data-max="{{data.treason.max}}" value="{{data.treason.value}}" data-dtype="Number"/>
             <div class="data-value click-stat-level" title="clicke me" >{{{data.treason.icon}}}</div>
