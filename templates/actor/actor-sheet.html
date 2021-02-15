@@ -84,15 +84,25 @@
         <div class="medium-box">Wellbeing >>></div>
       </div>
 
-      <div class="abilities grid grid-2col">
-      <div class="sheet-trackdata">
-          <div class="trackdata-key">moxie</div>
-          <div class="trackdata-value">
-            <input type="hidden" name="data.moxie.value" data-max="{{data.moxie.max}}" value="{{data.moxie.value}}" data-dtype="Number"/>
-            <div class="click-stat-level" title="clicke me" >{{{data.moxie.icon}}}</div>
-          </div>
-      </div>
-      <div class="sheet-trackdata">
+      <div class="abilities grid grid-2col" style="display: flex">
+        <div class="sheet-trackdata" style="flex:0.60">
+            <div class="abilities grid grid-2col" style="display: flex; margin: 0px">
+                <div style="flex:0.75">
+                    <div class="trackdata-key">moxie</div>
+                    <div class="trackdata-value">
+                        <input type="hidden" name="data.moxie.value" data-max="{{data.moxie.max}}" value="{{data.moxie.value}}" data-dtype="Number"/>
+                        <div class="click-stat-level" title="clicke me" >{{{data.moxie.icon}}}</div>
+                    </div>
+                </div>
+                <div style="flex:0.25">
+                    <div class="trackdata-key">max</div>
+                    <div class="trackdata-value">
+                        <input class="data-value" type="text" name="data.moxie.max" value="{{data.moxie.max}}" data-dtype="Number"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="sheet-trackdata" style="flex:1">
         <div class="trackdata-key">damage >>></div>
           <div class="trackdata-value">
             <input type="hidden" name="data.damage.value" data-max="{{data.damage.max}}" value="{{data.damage.value}}" data-dtype="Number"/>
@@ -183,7 +193,6 @@
               {{/each}} -->
             </div>
           </div>
-        </div>
 
         {{!-- Wellbeing Tab --}}
    
@@ -194,11 +203,11 @@
             <input type="hidden" name="data.moxie.value" data-max="{{data.moxie.max}}" value="{{data.moxie.value}}" data-dtype="Number">
                 <span class="click-stat-level" title="click" >{{{data.general.radiation.icon}}}Stuff
                 </span>
-            </div>--->
+            </div>
             <div class="ability flexrow flex-group-center">
               <label for="data.moxie.max" class="resource-label">Moxie Max</label>
               <input type="text" name="data.moxie.max" value="{{data.moxie.max}}" data-dtype="Number"/>
-            </div> <!---
+            </div>
           </div>
           <label class="resource-label">Hurt, Injured, Maimed, Dead</label>
           <div class="ability flexrow flex-group-center">
