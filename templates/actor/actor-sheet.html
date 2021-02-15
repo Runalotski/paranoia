@@ -43,8 +43,13 @@
 
     <div class="ability flexrow flex-center">
       <div class="sheet-data-flex">
-        <label class="data-key" for="data.treason.value" class="resource-label">Treason Stars</label>
-        <input class="data-value" type="text" name="data.treason.value" value="{{data.treason.value}}" data-dtype="Number"/>
+          
+          
+          <div class="data-key">Treason Stars</div>
+          <div class="trackdata-value">
+            <input type="hidden" name="data.treason.value" data-max="{{data.treason.max}}" value="{{data.treason.value}}" data-dtype="Number"/>
+            <div class="data-value click-stat-level" title="clicke me" >{{{data.treason.icon}}}</div>
+          </div>
       </div>
       <div class="sheet-data-flex">
         <label class="data-key" for="data.xp.value" class="resource-label">Xp Points</label>
