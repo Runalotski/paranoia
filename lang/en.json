@@ -1,3 +1,18 @@
 {
-"PARANOIA.TreasonStars": "Treason"
+    "PARANOIA.TreasonStars": "Treason",
+    "PARANOIA.XpPoints": "XP Points",
+    "PARANOIA.Moxie": "Moxie",
+    "PARANOIA.Max": "Max",
+    "PARANOIA.Damage": "Damage",
+    "PARANOIA.Core": "Core",
+    "PARANOIA.StatsNSkills": "Stats & Skills",
+    "PARANOIA.Notes": "Notes",
+    "PARANOIA.PartOne": "Part One",
+    "PARANOIA.CoreInformation": "Core Informtation",
+    "PARANOIA.Name": "Name",
+    "PARANOIA.Personality": "Personality",
+    "PARANOIA.Gender": "Gender",
+    "PARANOIA.SecurityClearence": "Security Clearence",
+    "PARANOIA.HomeSector": "Home Sector",
+    "PARANOIA.Clones": "Clones"
 }
