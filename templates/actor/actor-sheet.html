@@ -6,7 +6,7 @@
           <div class="dark-box">/// Part One</div>
           <div class="medium-box">Core Information >>></div>
         </div>
-        <div class="ability flexrow flex-center">
+        <div class="abilities grid grid-2col">
           <div class="sheet-data">
             <div class="data-key">Name :</div>
             <input class="data-value" input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
@@ -17,7 +17,7 @@
           </div>
       </div>
 
-      <div class="ability flexrow flex-center">
+      <div class="abilities grid grid-4col">
         <div class="sheet-data">
           <label class="data-key" for="data.gender.value" class="resource-label">Gender</label>
             <input class="data-value" type="text" name="data.gender.value" value="{{data.gender.value}}" data-dtype="String"/>
@@ -41,7 +41,7 @@
           <div class="medium-box">Core Development >>></div>
         </div>
 
-    <div class="ability flexrow flex-center">
+    <div class="abilities grid grid-2col">
       <div class="sheet-data-flex">
           <Label class="data-key">Treason Stars</Label>
           <div class="trackdata-value">
@@ -55,11 +55,13 @@
       </div>
     </div>
       <div class="sub-part">Stats >>></div>
-
-      <div class="sheet-data-flex">
+        <div class="abilities grid grid-4col">
         {{#each data.stats as |stat statID|}}
+              <div class="sheet-data">
+
             <label class="data-key" for="data.stats.{{statID}}.value" class="resource-label">{{statID}}</label>
             <input class="data-value" type="text" name="data.stats.{{statID}}.value" value="{{stat.value}}" data-dtype="Number"/>
+            </div>
         {{/each}} 
       </div>
 
@@ -71,8 +73,10 @@
       <div class="abilities grid grid-4col">
         {{#each data.skills as |skill skillID|}}
           <div class="ability flexrow flex-center">
-            <label class="data-key" for="data.skills.{{skillID}}.value" class="resource-label">{{skillID}}</label>
-            <input class="data-value" type="text" name="data.skills.{{skillID}}.value" value="{{skill.value}}" data-dtype="Number"/>
+              <div class="sheet-data">
+                <label class="data-key" for="data.skills.{{skillID}}.value" class="resource-label">{{skillID}}</label>
+                <input class="data-value" type="text" name="data.skills.{{skillID}}.value" value="{{skill.value}}" data-dtype="Number"/>
+              </div>
           </div>
         {{/each}}
       </div>

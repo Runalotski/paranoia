@@ -283,7 +283,8 @@
 }
 
 .paranoia .sheet-data{
-  padding: 10px;
+  padding-left: 10px;
+    padding-right: 10px;
   
 }
 .paranoia .sheet-data-flex{
