@@ -4,6 +4,18 @@
   font-family: "Roboto", sans-serif;
 }
 
+.window-app .window-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  background: #fff;
+  padding: 8px;
+  color: #191813;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .rollable:hover, .rollable:focus {
   color: #000;
   text-shadow: 0 0 10px red;
@@ -16,8 +28,8 @@
   grid-column: span 2 / span 2;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  margin: 10px 0;
-  padding: 0;
+  margin: 10px 0px;
+  padding: 0px;
 }
 
 .grid-3col {
@@ -170,6 +182,9 @@
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
+  background-color: #e1f4fd;
+  border:3px solid #7eb6e6;
+
 }
 
 .paranoia .sheet-body,
@@ -245,4 +260,98 @@
   -ms-flex: 0 0 86px;
   flex: 0 0 86px;
   text-align: right;
+}
+
+.paranoia .part-header{
+  display: flex;
+}
+
+.paranoia .part-header .dark-box{
+  float: left;
+  width: 100spx;
+  padding: 5px;
+  background-color: #244362;
+  text-align: center;
+  color: #fff;
+  }
+
+.paranoia .part-header .medium-box{
+  float: left;
+  flex: 1;
+  padding: 5px;
+  background-color: #7eb6e6;
+  font-weight: bold;
+}
+
+.paranoia .sheet-data{
+
+  
+}
+.paranoia .sheet-data-flex{
+  padding: 10px;
+  
+
+  display: flex;
+}
+
+.paranoia .sheet-data-flex-nopad{
+  display: flex;
+}
+
+
+.paranoia .data-key{
+  float: left;
+  padding: 5px;
+}
+
+.paranoia .data-value
+{
+  padding: 5px;
+  float: left;
+  flex: 1;
+  border:3px solid #7eb6e6;
+  text-align: left;
+}
+
+.paranoia .data-number{
+  padding: 5px;
+  float: left;
+  width: 30px;
+  border:3px solid #7eb6e6;
+  text-align: left;
+}
+
+.paranoia .sub-part{
+  flex: 1;
+  padding: 5px;
+  background-color: #e1f4fd;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #7eb6e6;
+  color: #7eb6e6;
+  font-weight: bold;
+}
+
+.paranoia .sheet-trackdata{
+  border-color: #7eb6e6;
+  border-style: solid;
+  border-width: 3px;
+  
+}
+
+.paranoia .trackdata-key{
+  background-color: #e1f4fd;
+  color: #7eb6e6;
+  font-weight: bold;
+  padding: 5px;
+}
+
+
+.paranoia .trackdata-value{
+  background-color: #ffffff;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.paranoia .click-stat-level{
 }

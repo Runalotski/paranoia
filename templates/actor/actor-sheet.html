@@ -1,44 +1,65 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
 
     {{!-- Sheet Header --}}
-    <header class="sheet-header">
-        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-        <div class="header-fields">
-          <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-          use both the "grid" and "grid-Ncol" class where "N" can be any number
-          from 1 to 12 and will create that number of columns.  --}}
-          <div class="resources grid grid-2col">
-            {{!-- "flex-group-center" is also defined in the _grid.scss file
-            and it will add a small amount of padding, a border, and will
-            center all of its child elements content and text. --}}
-            <div class="resource flex-group-center">
-                <label for="data.health.value" class="resource-label">Health</label>
-                <div class="resource-content flexrow flex-center flex-between">
-                  <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
-                  <span> / </span>
-                  <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
+    <header>
+        
+      <div class="abilities grid grid-2col" style="display: flex">
+            <div class="sheet-trackdata" style="flex:1">
+                <div class="trackdata-key">{{localize "PARANOIA.TreasonStars"}}</div>
+                  <div class="trackdata-value">
+                    <input type="hidden" name="data.treason.value" data-max="{{data.treason.max}}" value="{{data.treason.value}}" data-dtype="Number"/>
+                      <div class="click-stat-level sheet-data-flex-nopad" title="clicke me" >{{{data.treason.icon}}}</div>
+                  </div>
+              </div>
+
+          <div style="width: 10px"></div>
+          
+          <div class="sheet-trackdata" style="flex:1">
+                <div class="trackdata-key">{{localize "PARANOIA.XpPoints"}}</div>
+                  <input class="trackdata-value" name="data.xp.value" data-max="{{data.xp.max}}" value="{{data.xp.value}}" data-dtype="Number" style="flex: 1"/>
+                  </div>
+      </div>
+   
+
+      <div class="abilities grid grid-2col" style="display: flex">
+        <div class="sheet-trackdata" style="flex:0.60">
+            <div class="abilities grid grid-2col" style="display: flex; margin: 0px">
+                <div style="flex:0.75">
+                    <div class="trackdata-key">{{localize "PARANOIA.Moxie"}}</div>
+                    <div class="trackdata-value">
+                        <input type="hidden" name="data.moxie.value" data-max="{{data.moxie.max}}" value="{{data.moxie.value}}" data-dtype="Number"/>
+                        <div class="click-stat-level" title="clicke me" >{{{data.moxie.icon}}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="resource flex-group-center">
-                <label for="data.power.value" class="resource-label">Power</label>
-                <div class="resource-content flexrow flex-center flex-between">
-                  <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number"/>
-                  <span> / </span>
-                  <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number"/>
+                <div style="flex:0.25">
+                    <div class="trackdata-key">{{localize "PARANOIA.Max"}}</div>
+                    <div class="trackdata-value">
+                        <input class="data-value" type="text" name="data.moxie.max" value="{{data.moxie.max}}" data-dtype="Number"/>
+                    </div>
                 </div>
             </div>
         </div>
+          
+          <div style="width: 10px"></div>
+          
+      <div class="sheet-trackdata" style="flex:1">
+        <div class="trackdata-key">{{localize "PARANOIA.Damage"}}</div>
+          <div class="trackdata-value">
+            <input type="hidden" name="data.damage.value" data-max="{{data.damage.max}}" value="{{data.damage.value}}" data-dtype="Number"/>
+              <div class="click-stat-level sheet-data-flex-nopad" title="clicke me" >{{{data.damage.icon}}}</div>
+          </div>
+      </div>
+    </div>
         
     </header>
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="core">Core</a>
-        <a class="item" data-tab="stats">Stats & Skills</a>
-        <a class="item" data-tab="wellbeing">Wellbeing</a>
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="items">Items</a>
+        <a class="item" data-tab="core">{{localize "PARANOIA.Core"}}</a>
+        <a class="item" data-tab="stats">{{localize "PARANOIA.StatsNSkills"}}</a>
+        <!--<a class="item" data-tab="wellbeing">Wellbeing</a>-->
+        <a class="item" data-tab="description">{{localize "PARANOIA.Notes"}}</a>
+        <!--<a class="item" data-tab="items">Items</a>-->
     </nav>
 
     {{!-- Sheet Body --}}
@@ -46,68 +67,85 @@
 
       {{!-- Core Tab --}}
         <div class="tab biography" data-group="primary" data-tab="core">
+<div class="part-header">
+          <div class="dark-box">{{localize "PARANOIA.PartOne"}}</div>
+          <div class="medium-box">{{localize "PARANOIA.CoreInformation"}}</div>
+        </div>
+        <div class="abilities grid grid-2col">
+          <div class="sheet-data">
+            <div class="data-key">{{localize "PARANOIA.Name"}}</div>
+            <input class="data-value" input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+          </div>
+          <div class="sheet-data">
+            <label class="data-key" for="data.personality.value" class="resource-label">{{localize "PARANOIA.Personality"}}</label>
+            <input class="data-value" type="text" name="data.personality.value" value="{{data.personality.value}}" data-dtype="String"/>
+          </div>
+      </div>
 
-          <div class="ability flexrow flex-group-center">
-            <label for="data.clones.value" class="resource-label">Clones</label>
-            <input type="text" name="data.clones.value" value="{{data.clones.value}}" data-dtype="Number"/>
-          </div>
-          <div class="ability flexrow flex-group-center">
-            <label for="data.treason.value" class="resource-label">Treason Stars</label>
-            <input type="text" name="data.treason.value" value="{{data.treason.value}}" data-dtype="Number"/>
-          </div>
-          <div class="ability flexrow flex-group-center">
-            <label for="data.xp.value" class="resource-label">Xp Points</label>
-            <input type="text" name="data.xp.value" value="{{data.xp.value}}" data-dtype="Number"/>
-          </div>
-          <div class="ability flexrow flex-group-center">
-            <label for="data.personality.value" class="resource-label">Personality</label>
-            <input type="text" name="data.personality.value" value="{{data.personality.value}}" data-dtype="String"/>
-          </div>
-          <br>
-          <div class="ability flexrow flex-group-center">
-            <label for="data.clearence.value" class="resource-label">Security Clearence</label>
-            <input type="text" name="data.clearence.value" value="{{data.clearence.value}}" data-dtype="String"/>
-          </div>
-          <div class="ability flexrow flex-group-center">
-            <label for="data.homesec.value" class="resource-label">Home Sector</label>
-            <input type="text" name="data.homesec.value" value="{{data.homesec.value}}" data-dtype="String"/>
-          </div> 
-          <div class="ability flexrow flex-group-center">
-            <label for="data.gender.value" class="resource-label">Gender</label>
-            <input type="text" name="data.gender.value" value="{{data.gender.value}}" data-dtype="String"/>
-          </div>
-          
+      <div class="abilities grid grid-4col">
+        <div class="sheet-data">
+          <label class="data-key" for="data.gender.value" class="resource-label">{{localize "PARANOIA.Gender"}}</label>
+            <input class="data-value" type="text" name="data.gender.value" value="{{data.gender.value}}" data-dtype="String"/>
+        </div>
+        <div class="sheet-data">
+          <label class="data-key" for="data.clearence.value" class="resource-label">{{localize "PARANOIA.SecurityClearence"}}</label>
+          <input class="data-value" type="text" name="data.clearence.value" value="{{data.clearence.value}}" data-dtype="String"/>
+        </div>
+        <div class="sheet-data">
+          <label class="data-key" for="data.homesec.value" class="resource-label">{{localize "PARANOIA.HomeSector"}}</label>
+          <input class="data-value" type="text" name="data.homesec.value" value="{{data.homesec.value}}" data-dtype="String"/>
+        </div>
+        <div class="sheet-data" style="flex:0.1">
+          <label class="data-key" for="data.clones.value" class="resource-label">{{localize "PARANOIA.Clones"}}</label>
+          <input class="data-value" type="text" name="data.clones.value" value="{{data.clones.value}}" data-dtype="Number"/>
+        </div>
+      </div>
         </div>
 
         {{!-- stats and skills Tab --}}
         <div class="tab biography" data-group="primary" data-tab="stats">
-          <div>Stats</div>
-          <div class="abilities grid grid-4col">
-            {{#each data.stats as |stat statID|}}
-              <div class="ability flexrow flex-group-center">
-                <label for="data.stats.{{statID}}.value" class="resource-label">{{statID}}</label>
-                <input type="text" name="data.stats.{{statID}}.value" value="{{stat.value}}" data-dtype="Number"/>
-              </div>
-            {{/each}} 
-          </div>
-          <div>Skills</div>
-            <div class="abilities grid grid-4col">
-              {{#each data.skills as |skill skillID|}}
-                <div class="ability flexrow flex-group-center">
-                  <label for="data.skills.{{skillID}}.value" class="resource-label">{{skillID}}</label>
-                  <input type="text" name="data.skills.{{skillID}}.value" value="{{skill.value}}" data-dtype="Number"/>
-                </div>
-              {{/each}}
-            </div>
-          </div>
+          <div class="part-header">
+          <div class="dark-box">{{localize "PARANOIA.PartTwo"}}</div>
+          <div class="medium-box">{{localize "PARANOIA.Stats"}}</div>
         </div>
 
+
+        <div class="abilities grid grid-4col">
+        {{#each data.stats as |stat statID|}}
+              <div class="sheet-data">
+
+            <label class="data-key" for="data.stats.{{statID}}.value" class="resource-label">{{stat.label}}</label>
+            <input class="data-value" type="text" name="data.stats.{{statID}}.value" value="{{stat.value}}" data-dtype="Number"/>
+            </div>
+        {{/each}} 
+      </div>
+             <div class="part-header">
+        <div class="dark-box">/// Part Three</div>
+        <div class="medium-box">SKills >>></div>
+      </div>
+
+      <div class="abilities grid grid-4col">
+        {{#each data.skills as |skill skillID|}}
+          <div class="ability flexrow flex-center">
+              <div class="sheet-data">
+                <label class="data-key" for="data.skills.{{skillID}}.value" class="resource-label">{{skill.label}}</label>
+                <input class="data-value" type="text" name="data.skills.{{skillID}}.value" value="{{skill.value}}" data-dtype="Number"/>
+              </div>
+          </div>
+        {{/each}}
+      </div>
+
+          </div>
+
         {{!-- Wellbeing Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="wellbeing">
-          <div class="abilities grid grid-2col">
+   
+        <div class="tab biography" data-group="primary" data-tab="wellbeing"> 
+          <!---<div class="abilities grid grid-2col">
             <div class="ability flexrow flex-group-center">
-              <label for="data.moxie.value" class="resource-label">Moxie</label>
-              <input type="text" name="data.moxie.value" value="{{data.moxie.value}}" data-dtype="Number"/>
+            <label class="resource-label">Moxie</label>
+            <input type="hidden" name="data.moxie.value" data-max="{{data.moxie.max}}" value="{{data.moxie.value}}" data-dtype="Number">
+                <span class="click-stat-level" title="click" >{{{data.general.radiation.icon}}}Stuff
+                </span>
             </div>
             <div class="ability flexrow flex-group-center">
               <label for="data.moxie.max" class="resource-label">Moxie Max</label>
@@ -118,11 +156,11 @@
           <div class="ability flexrow flex-group-center">
             <label for="data.wounds.value" class="resource-label">Wounds</label>
             <input type="text" name="data.wounds.value" value="{{data.wounds.value}}" data-dtype="String"/>
-          </div>
+          </div> --->
         </div>
 
         {{!-- Biography Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="description">
+        <div class="tab biography" data-group="primary" data-tab="description" style="border-color: #7eb6e6;border-style: solid;border-width: 3px;">
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div>
 
