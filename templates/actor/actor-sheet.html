@@ -2,7 +2,72 @@
 
     {{!-- Sheet Header --}}
     <header>
-        <div class="part-header">
+        
+      <div class="abilities grid grid-2col" style="display: flex">
+            <div class="sheet-trackdata" style="flex:1">
+                <div class="trackdata-key">treason stars >>></div>
+                  <div class="trackdata-value">
+                    <input type="hidden" name="data.treason.value" data-max="{{data.treason.max}}" value="{{data.treason.value}}" data-dtype="Number"/>
+                      <div class="click-stat-level sheet-data-flex-nopad" title="clicke me" >{{{data.treason.icon}}}</div>
+                  </div>
+              </div>
+
+          <div style="width: 10px"></div>
+          
+          <div class="sheet-trackdata" style="flex:1">
+                <div class="trackdata-key">XP Points >>></div>
+                  <input class="trackdata-value" name="data.xp.value" data-max="{{data.xp.max}}" value="{{data.xp.value}}" data-dtype="Number" style="flex: 1"/>
+                  </div>
+      </div>
+   
+
+      <div class="abilities grid grid-2col" style="display: flex">
+        <div class="sheet-trackdata" style="flex:0.60">
+            <div class="abilities grid grid-2col" style="display: flex; margin: 0px">
+                <div style="flex:0.75">
+                    <div class="trackdata-key">moxie</div>
+                    <div class="trackdata-value">
+                        <input type="hidden" name="data.moxie.value" data-max="{{data.moxie.max}}" value="{{data.moxie.value}}" data-dtype="Number"/>
+                        <div class="click-stat-level" title="clicke me" >{{{data.moxie.icon}}}</div>
+                    </div>
+                </div>
+                <div style="flex:0.25">
+                    <div class="trackdata-key">max</div>
+                    <div class="trackdata-value">
+                        <input class="data-value" type="text" name="data.moxie.max" value="{{data.moxie.max}}" data-dtype="Number"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+          <div style="width: 10px"></div>
+          
+      <div class="sheet-trackdata" style="flex:1">
+        <div class="trackdata-key">damage >>></div>
+          <div class="trackdata-value">
+            <input type="hidden" name="data.damage.value" data-max="{{data.damage.max}}" value="{{data.damage.value}}" data-dtype="Number"/>
+              <div class="click-stat-level sheet-data-flex-nopad" title="clicke me" >{{{data.damage.icon}}}</div>
+          </div>
+      </div>
+    </div>
+        
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="core">Core</a>
+        <a class="item" data-tab="stats">Stats & Skills</a>
+        <a class="item" data-tab="wellbeing">Wellbeing</a>
+        <a class="item" data-tab="description">Notes</a>
+        <!--<a class="item" data-tab="items">Items</a>-->
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+      {{!-- Core Tab --}}
+        <div class="tab biography" data-group="primary" data-tab="core">
+<div class="part-header">
           <div class="dark-box">/// Part One</div>
           <div class="medium-box">Core Information >>></div>
         </div>
@@ -35,26 +100,16 @@
           <input class="data-value" type="text" name="data.clones.value" value="{{data.clones.value}}" data-dtype="Number"/>
         </div>
       </div>
-      
-        <div class="part-header">
-          <div class="dark-box">/// Part Two</div>
-          <div class="medium-box">Core Development >>></div>
         </div>
 
-    <div class="abilities grid grid-2col">
-      <div class="sheet-data-flex">
-          <Label class="data-key">Treason Stars</Label>
-          <div class="trackdata-value">
-            <input type="hidden" name="data.treason.value" data-max="{{data.treason.max}}" value="{{data.treason.value}}" data-dtype="Number"/>
-            <div class="data-value click-stat-level" title="clicke me" >{{{data.treason.icon}}}</div>
-          </div>
-      </div>
-      <div class="sheet-data-flex">
-        <label class="data-key" for="data.xp.value" class="resource-label">Xp Points</label>
-        <input class="data-value" type="text" name="data.xp.value" value="{{data.xp.value}}" data-dtype="Number"/>
-      </div>
-    </div>
-      <div class="sub-part">Stats >>></div>
+        {{!-- stats and skills Tab --}}
+        <div class="tab biography" data-group="primary" data-tab="stats">
+          <div class="part-header">
+          <div class="dark-box">/// Part Two</div>
+          <div class="medium-box">Core Stats >>></div>
+        </div>
+
+
         <div class="abilities grid grid-4col">
         {{#each data.stats as |stat statID|}}
               <div class="sheet-data">
@@ -64,8 +119,7 @@
             </div>
         {{/each}} 
       </div>
-
-      <div class="part-header">
+             <div class="part-header">
         <div class="dark-box">/// Part Three</div>
         <div class="medium-box">SKills >>></div>
       </div>
@@ -81,119 +135,6 @@
         {{/each}}
       </div>
 
-      <div class="part-header">
-        <div class="dark-box">/// Part Four</div> 
-        <div class="medium-box">Wellbeing >>></div>
-      </div>
-
-      <div class="abilities grid grid-2col" style="display: flex">
-        <div class="sheet-trackdata" style="flex:0.60">
-            <div class="abilities grid grid-2col" style="display: flex; margin: 0px">
-                <div style="flex:0.75">
-                    <div class="trackdata-key">moxie</div>
-                    <div class="trackdata-value">
-                        <input type="hidden" name="data.moxie.value" data-max="{{data.moxie.max}}" value="{{data.moxie.value}}" data-dtype="Number"/>
-                        <div class="click-stat-level" title="clicke me" >{{{data.moxie.icon}}}</div>
-                    </div>
-                </div>
-                <div style="flex:0.25">
-                    <div class="trackdata-key">max</div>
-                    <div class="trackdata-value">
-                        <input class="data-value" type="text" name="data.moxie.max" value="{{data.moxie.max}}" data-dtype="Number"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-      <div class="sheet-trackdata" style="flex:1">
-        <div class="trackdata-key">damage >>></div>
-          <div class="trackdata-value">
-            <input type="hidden" name="data.damage.value" data-max="{{data.damage.max}}" value="{{data.damage.value}}" data-dtype="Number"/>
-              <div class="click-stat-level sheet-data-flex-nopad" title="clicke me" >{{{data.damage.icon}}}</div>
-          </div>
-      </div>
-    </div>
-
-    <div class="sheet-trackdata">
-      <div class="trackdata-key">Memory >>></div>
-      <div class="trackdata-value">ZB</div>
-    </div>
-        
-        <br>
-
-    <div class="part-header">
-      <div class="dark-box">/// Part Five</div>
-      <div class="medium-box">Equipment >>></div>
-    </div>
-        
-    </header>
-
-    {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="core">Core</a>
-        <a class="item" data-tab="stats">Stats & Skills</a>
-        <a class="item" data-tab="wellbeing">Wellbeing</a>
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="items">Items</a>
-    </nav>
-
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
-
-      {{!-- Core Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="core">
-<!--
-          <div class="ability flexrow flex-group-center">
-            <label for="data.clones.value" class="resource-label">Clones</label>
-            <input type="text" name="data.clones.value" value="{{data.clones.value}}" data-dtype="Number"/>
-          </div>
-          <div class="ability flexrow flex-group-center">
-            <label for="data.treason.value" class="resource-label">Treason Stars</label>
-            <input type="text" name="data.treason.value" value="{{data.treason.value}}" data-dtype="Number"/>
-          </div>
-          <div class="ability flexrow flex-group-center">
-            <label for="data.xp.value" class="resource-label">Xp Points</label>
-            <input type="text" name="data.xp.value" value="{{data.xp.value}}" data-dtype="Number"/>
-          </div>
-          <div class="ability flexrow flex-group-center">
-            <label for="data.personality.value" class="resource-label">Personality</label>
-            <input type="text" name="data.personality.value" value="{{data.personality.value}}" data-dtype="String"/>
-          </div>
-          <br>
-          <div class="ability flexrow flex-group-center">
-            <label for="data.clearence.value" class="resource-label">Security Clearence</label>
-            <input type="text" name="data.clearence.value" value="{{data.clearence.value}}" data-dtype="String"/>
-          </div>
-          <div class="ability flexrow flex-group-center">
-            <label for="data.homesec.value" class="resource-label">Home Sector</label>
-            <input type="text" name="data.homesec.value" value="{{data.homesec.value}}" data-dtype="String"/>
-          </div> 
-          <div class="ability flexrow flex-group-center">
-            <label for="data.gender.value" class="resource-label">Gender</label>
-            <input type="text" name="data.gender.value" value="{{data.gender.value}}" data-dtype="String"/>
-          </div>
-          -->
-        </div>
-
-        {{!-- stats and skills Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="stats">
-          <div>Stats</div>
-          <div class="abilities grid grid-4col"><!--
-            {{#each data.stats as |stat statID|}}
-              <div class="ability flexrow flex-group-center">
-                <label for="data.stats.{{statID}}.value" class="resource-label">{{statID}}</label>
-                <input type="text" name="data.stats.{{statID}}.value" value="{{stat.value}}" data-dtype="Number"/>
-              </div>
-            {{/each}} 
-          </div>
-          <div>Skills</div>
-            <div class="abilities grid grid-4col">
-              {{#each data.skills as |skill skillID|}}
-                <div class="ability flexrow flex-group-center">
-                  <label for="data.skills.{{skillID}}.value" class="resource-label">{{skillID}}</label>
-                  <input type="text" name="data.skills.{{skillID}}.value" value="{{skill.value}}" data-dtype="Number"/>
-                </div>
-              {{/each}} -->
-            </div>
           </div>
 
         {{!-- Wellbeing Tab --}}
@@ -219,7 +160,7 @@
         </div>
 
         {{!-- Biography Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="description">
+        <div class="tab biography" data-group="primary" data-tab="description" style="border-color: #7eb6e6;border-style: solid;border-width: 3px;">
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div>
 
