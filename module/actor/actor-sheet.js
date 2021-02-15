@@ -28,7 +28,7 @@ export class paranoiaActorSheet extends ActorSheet {
     data.actor.data.moxie.icon = this._getClickIcon(data.actor.data.moxie.value, 'moxie');
       
     data.actor.data.treason.icon = this._getClickIcon(data.actor.data.treason.value, 'treason', '<i class="fas fa-star"></i>', '<i class="far fa-star"></i>');
-      
+     
     data.actor.data.damage.icon = this._getDamageClickIcon();
       
     return data;
@@ -144,7 +144,7 @@ export class paranoiaActorSheet extends ActorSheet {
                          '<div class="trackdata-value">dead</div>']
     const maxPoints = this.object.data.data.damage.max;
     const icons = {};
-    const usedPoint = '<i class="trackdata-value fas fa-square"></i>';
+    const usedPoint = '<i class="trackdata-value fas fa-check-square"></i>';
     const unUsedPoint = '<i class="trackdata-value far fa-square"></i>';
 
     for (let i = 0; i <= maxPoints; i++) {

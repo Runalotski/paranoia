@@ -352,8 +352,8 @@
 
 .paranoia .trackdata-value{
   background-color: #ffffff;
-  color: #7eb6e6;
   padding: 5px;
+  font-size: 15px;
 }
 
 .paranoia .click-stat-level{
