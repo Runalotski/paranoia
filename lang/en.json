@@ -1,5 +1,5 @@
 {
-    "PARANOIA.TreasonStars": "Treason",
+    "PARANOIA.TreasonStars": "Treason Stars",
     "PARANOIA.XpPoints": "XP Points",
     "PARANOIA.Moxie": "Moxie",
     "PARANOIA.Max": "Max",
@@ -14,5 +14,30 @@
     "PARANOIA.Gender": "Gender",
     "PARANOIA.SecurityClearence": "Security Clearence",
     "PARANOIA.HomeSector": "Home Sector",
-    "PARANOIA.Clones": "Clones"
+    "PARANOIA.Clones": "Clones",
+    "PARANOIA.PartTwo": "Part Two",
+    "PARANOIA.Stats": "Stats",
+    
+    "PARANOIA.statVio": "Violence",
+    "PARANOIA.statBra": "Brains",
+    "PARANOIA.statChu": "Chutzpah",
+    "PARANOIA.statMec": "Mechanics",
+    
+    "PARANOIA.skillAthletics": "Athletics",
+    "PARANOIA.skillScience": "Science",
+    "PARANOIA.skillBluff": "Bluff",
+    "PARANOIA.skillOperate":"Operate",
+    "PARANOIA.skillGuns": "Guns",
+    "PARANOIA.skillPsychology": "Psychology",
+    "PARANOIA.skillCharm": "Charm",
+    "PARANOIA.skillEngineer": "Engineer",
+    "PARANOIA.skillMeele": "Meele",
+    "PARANOIA.skillBureaucracy": "Bureaucracy",
+    "PARANOIA.skillIntimidate": "Intimidate",
+    "PARANOIA.skillProgram": "Program",
+    "PARANOIA.skillThrow": "Throw",
+    "PARANOIA.skillAlphaComplex": "Alpha Complex",
+    "PARANOIA.skillStealth": "Stealth",
+    "PARANOIA.skillDemolitions": "Demolitions"
+    
 }

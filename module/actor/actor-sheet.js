@@ -2,6 +2,8 @@
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
+import { PARANOIA } from '../config.js'
+
 export class paranoiaActorSheet extends ActorSheet {
 
   /** @override */
@@ -23,6 +25,14 @@ export class paranoiaActorSheet extends ActorSheet {
     data.dtypes = ["String", "Number", "Boolean"];
     for (let attr of Object.values(data.data.attributes)) {
       attr.isCheckbox = attr.dtype === "Boolean";
+    }
+      
+    for (let [key, abil] of Object.entries(data.data.stats)){
+        abil.label = game.i18n.localize(PARANOIA.stats[key])
+    }
+      
+    for (let [key, abil] of Object.entries(data.data.skills)){
+        abil.label = game.i18n.localize(PARANOIA.skills[key])
     }
     
     data.actor.data.moxie.icon = this._getClickIcon(data.actor.data.moxie.value, 'moxie');

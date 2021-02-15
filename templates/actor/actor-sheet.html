@@ -105,8 +105,8 @@
         {{!-- stats and skills Tab --}}
         <div class="tab biography" data-group="primary" data-tab="stats">
           <div class="part-header">
-          <div class="dark-box">/// Part Two</div>
-          <div class="medium-box">Core Stats >>></div>
+          <div class="dark-box">{{localize "PARANOIA.PartTwo"}}</div>
+          <div class="medium-box">{{localize "PARANOIA.Stats"}}</div>
         </div>
 
 
@@ -114,7 +114,7 @@
         {{#each data.stats as |stat statID|}}
               <div class="sheet-data">
 
-            <label class="data-key" for="data.stats.{{statID}}.value" class="resource-label">{{statID}}</label>
+            <label class="data-key" for="data.stats.{{statID}}.value" class="resource-label">{{stat.label}}</label>
             <input class="data-value" type="text" name="data.stats.{{statID}}.value" value="{{stat.value}}" data-dtype="Number"/>
             </div>
         {{/each}} 
@@ -128,7 +128,7 @@
         {{#each data.skills as |skill skillID|}}
           <div class="ability flexrow flex-center">
               <div class="sheet-data">
-                <label class="data-key" for="data.skills.{{skillID}}.value" class="resource-label">{{skillID}}</label>
+                <label class="data-key" for="data.skills.{{skillID}}.value" class="resource-label">{{skill.label}}</label>
                 <input class="data-value" type="text" name="data.skills.{{skillID}}.value" value="{{skill.value}}" data-dtype="Number"/>
               </div>
           </div>
