@@ -3,6 +3,8 @@ import { paranoiaActor } from "./actor/actor.js";
 import { paranoiaActorSheet } from "./actor/actor-sheet.js";
 import { paranoiaItem } from "./item/item.js";
 import { paranoiaItemSheet } from "./item/item-sheet.js";
+import { ParanoiaRPGDoDie } from "./paranoiarpgDice.js";
+import { ParanoiaRPGComputerDie } from "./paranoiarpgDice.js";
 
 Hooks.once('init', async function() {
 
