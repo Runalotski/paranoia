@@ -38,6 +38,10 @@
     "PARANOIA.skillThrow": "Throw",
     "PARANOIA.skillAlphaComplex": "Alpha Complex",
     "PARANOIA.skillStealth": "Stealth",
-    "PARANOIA.skillDemolitions": "Demolitions"
+    "PARANOIA.skillDemolitions": "Demolitions",
     
+    "PARANOIA.Hurt": "Hurt",
+    "PARANOIA.Injured": "Injured",
+    "PARANOIA.Maimed": "Maimed",
+    "PARANOIA.Dead": "Dead"
 }

@@ -148,10 +148,16 @@ export class paranoiaActorSheet extends ActorSheet {
   }
     
     _getDamageClickIcon() {
-    const damageLabels = ['<div class="trackdata-value">hurt</div>',
-                         '<div class="trackdata-value">injured</div>',
-                         '<div class="trackdata-value">maimed</div>',
-                         '<div class="trackdata-value">dead</div>']
+        
+        const hurt = game.i18n.localize('PARANOIA.Hurt');
+        const injured = game.i18n.localize('PARANOIA.Injured');
+        const maimed = game.i18n.localize('PARANOIA.Maimed');
+        const dead = game.i18n.localize('PARANOIA.Dead');
+        
+    const damageLabels = ['<div class="trackdata-value">' + hurt + '</div>',
+                         '<div class="trackdata-value">' + injured + '</div>',
+                         '<div class="trackdata-value">' + maimed + '</div>',
+                         '<div class="trackdata-value">' + dead + '</div>']
     const maxPoints = this.object.data.data.damage.max;
     const icons = {};
     const usedPoint = '<i class="trackdata-value fas fa-check-square"></i>';
