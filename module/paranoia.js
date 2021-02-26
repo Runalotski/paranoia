@@ -12,6 +12,9 @@ Hooks.once('init', async function() {
     paranoiaActor,
     paranoiaItem
   };
+    
+  // Set FVTT version constant
+  const is07x = game.data.version.split('.')[1] === '7';
 
   /**
    * Set an initiative formula for the system
@@ -21,6 +24,12 @@ Hooks.once('init', async function() {
     formula: "1d20",
     decimals: 2
   };
+    
+    // If the FVTT version is > V0.7.x initalise the Base and Stress dice terms
+  if (is07x) {
+    CONFIG.Dice.terms['d'] = ParanoiaRPGDoDie;
+    CONFIG.Dice.terms['s'] = ParanoiaRPGComputerDie;
+  }
 
   // Define custom Entity classes
   CONFIG.Actor.entityClass = paranoiaActor;
@@ -48,9 +57,6 @@ Hooks.once('init', async function() {
   });
 
   Handlebars.registerHelper('ifEql', function(v1, v2) {
-    console.log("v1 = " + v1);
-    console.log("v2 = " + v2);
-    console.log("v1 == v2 " + v1 == v2);
     return v1 == v2;
   });
 });

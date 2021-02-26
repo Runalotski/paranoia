@@ -16,7 +16,7 @@ PARANOIA.skills = {
     "psychology":   "PARANOIA.skillPsychology",
     "charm":        "PARANOIA.skillCharm",
     "engineer":     "PARANOIA.skillEngineer",
-    "meele":        "PARANOIA.skillMeele",
+    "melee":        "PARANOIA.skillMelee",
     "bureaucracy":  "PARANOIA.skillBureaucracy",
     "intimidate":   "PARANOIA.skillIntimidate",
     "program":      "PARANOIA.skillProgram",
